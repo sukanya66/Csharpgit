@@ -1,31 +1,20 @@
 ﻿using System;
-
-class Customer
-{
-    string _firstname;
-    string _lastname;
-
-    public Customer(string firstname, string lastname)
-    {
-        _firstname = firstname;
-        _lastname = lastname;
-    }
-
-    public string PrintFullName()
-    {
-        return _firstname + " " + _lastname;
-    }
-
-    ~Customer()
-    {
-        //clean-up code
-    }
-}
+using System.Collections.Generic;
 class Program
 {
     static void Main()
     {
-        Customer c1 = new Customer("sukanya", "barrenakla");
-        Console.WriteLine(c1.PrintFullName());
+            Employee employee =new Employee(Id=1001,nameof="Ashok",Salary=98000);
+            Console.WriteLine(employee);
+            List<Employee> employees= new List<Employee>
+            {
+             new Employee{Id=1002,Name="mouni",Salary=45000},
+             new Employee{Id=1002,Name="Rahul",Salary=55000}
+            };
+            foreach(Employee emp in employees)
+            {
+                Console.WriteLine(emp);
+            }
+        
     }
 }

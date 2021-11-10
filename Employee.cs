@@ -7,7 +7,7 @@ namespace Properties
     public double Salary{get;set;}
     public override string ToString()
     {
-        return $"{Id}\t{Nmae}\t{Salary}";
+        return $"{Id}\t{Name}\t{Salary}";
     }
 
     }
