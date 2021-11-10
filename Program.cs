@@ -1,31 +1,27 @@
 ﻿using System;
-
-class Customer
+class Circle
 {
-    string _firstname;
-    string _lastname;
+    static float PI;
+    int _radius;
+    static Circle()
+    {
+        PI=3.14f;
 
-    public Customer(string firstname, string lastname)
-    {
-        _firstname = firstname;
-        _lastname = lastname;
     }
-
-    public string PrintFullName()
+    public Circle(int radius)
     {
-        return _firstname + " " + _lastname;
+      _radius=radius;
     }
-
-    ~Customer()
+    public double Area()
     {
-        //clean-up code
+        return PI*_radius*_radius;
     }
-}
-class Program
-{
-    static void Main()
+    class Program
     {
-        Customer c1 = new Customer("sukanya", "barrenakla");
-        Console.WriteLine(c1.PrintFullName());
+        static void Main()
+        {
+            Circle c1= new Circle(5);
+            Console.WriteLine("Area is :{0}",c1.Area());
+        }
     }
 }
