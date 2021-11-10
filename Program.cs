@@ -1,31 +1,36 @@
 ﻿using System;
-
-class Customer
+namespace Demo
 {
-    string _firstname;
-    string _lastname;
-
-    public Customer(string firstname, string lastname)
+    class Employee
     {
-        _firstname = firstname;
-        _lastname = lastname;
+        int _eno;
+        string _ename;
+        public int Eno
+        {
+            get
+            {
+                return _eno;
+            }
+            set
+            {
+                _eno = value+1;
+            }
+        }
+            public string Ename
+        {
+            get { return _ename; }
+            set { _ename = value+"1" ; }
+        }
+        
     }
-
-    public string PrintFullName()
+    class Program
     {
-        return _firstname + " " + _lastname;
-    }
-
-    ~Customer()
-    {
-        //clean-up code
-    }
-}
-class Program
-{
-    static void Main()
-    {
-        Customer c1 = new Customer("sukanya", "barrenakla");
-        Console.WriteLine(c1.PrintFullName());
+        static void Main()
+        {
+            Employee employee = new Employee();
+            employee.Eno = 101;
+            employee.Ename = "hema";
+            Console.WriteLine("{0} \t {1}",employee.Eno,employee.Ename);
+        }
     }
 }
